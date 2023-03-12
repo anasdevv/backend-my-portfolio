@@ -6,7 +6,7 @@ router.post('/contact', (req, res) => {
   console.log('here');
   const data = req.body || {};
   if (
-    !data ||
+    !Object.keys(data) ||
     data.name.length === 0 ||
     data.email.length === 0 ||
     data.message.length === 0
